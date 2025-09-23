@@ -101,16 +101,5 @@ O plugin cria o **App Service** no Azure (plano **F1**) e sobe a aplicação.
    az container create -g rg-moneyhub -n aci-api-dimdim-v1      --image moneyhubrpf1776.azurecr.io/api-dimdim:v1      --registry-login-server moneyhubrpf1776.azurecr.io      --registry-username <USERNAME> --registry-password <PASSWORD>      --cpu 1 --memory 1 --ports 8080 --ip-address Public
    ```
 
-Repita o processo para as versões `v2` e `v3`.
+Repite o mesmo processo para as versões `v2` e `v3`.
 
----
-
-## ✅ Checklist de entrega
-
-- [x] Aplicação Java com **endpoint raiz** e **health check**.  
-- [x] `pom.xml` configurado com plugin do Azure App Service.  
-- [x] `Dockerfile` pronto para buildar a aplicação.  
-- [x] Documentação no `README.md` explicando execução local e deploy em nuvem.  
-- [x] Instruções para envio de **3 versões** da imagem ao **ACR** e criação de instâncias no **ACI**.
-
----
