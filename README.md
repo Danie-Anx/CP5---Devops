@@ -3,8 +3,8 @@
 A **API DimDim** é uma aplicação Java construída com **Spring Boot** que expõe um endpoint simples de teste e um endpoint de saúde da aplicação.  
 O projeto foi desenvolvido como parte da atividade prática de **DevOps / Azure**, envolvendo:
 
-- **Fase 1** → Deploy da aplicação Java no **Azure App Service** (plano gratuito F1), usando o plugin Maven.  
-- **Fase 2** → Criação de imagem Docker, publicação no **Azure Container Registry (ACR)** em três versões (`v1`, `v2`, `v3`) e execução no **Azure Container Instances (ACI)**.
+- **Fase 1** → Deploy da aplicação Java no **Azure App Service**, usando o plugin Maven.  
+- **Fase 2** → Criação de imagem Docker, publicação no **Azure Container Registry** em três versões (`v1`, `v2`, `v3`) e execução no **Azure Container Instances**.
 
 ---
 
@@ -42,7 +42,7 @@ Isso garante que a aplicação pode ser usada tanto para **teste local** quanto 
 
 ---
 
-## 🐳 Rodando com Docker (opcional)
+## 🐳 Rodando com Docker
 
 1. Crie a imagem:
    ```bash
@@ -74,7 +74,7 @@ Isso garante que a aplicação pode ser usada tanto para **teste local** quanto 
    mvn azure-webapp:deploy
    ```
 
-O plugin cria o **App Service** no Azure (plano **F1**) e sobe a aplicação.
+O plugin cria o **App Service** no Azure e sobe a aplicação.
 
 ---
 
