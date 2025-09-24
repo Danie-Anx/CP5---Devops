@@ -116,4 +116,4 @@ Repita o mesmo processo para as versões `v2` e `v3`.
 
 ---
 
-✅ **Resumo:** Testamos e rodamos a API com sucesso via **Visual Studio Code**, utilizando Maven para build e execução local. A aplicação respondeu corretamente em `http://localhost:8080/` e `http://localhost:8080/actuator/health`.
+✅ **Resumo:** Testei e rodei a API com sucesso via **Visual Studio Code**, utilizando Maven para build e execução local. A aplicação respondeu corretamente em `http://localhost:8080/` e `http://localhost:8080/actuator/health`.
