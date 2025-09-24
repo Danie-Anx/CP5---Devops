@@ -120,4 +120,6 @@ Aluno: Robert Daniel Da Silva Coimbra
 RM: 555881
 Turma: 2TDSPW
 
+---
+
 ✅ **Resumo:** Testei e rodei a API com sucesso via **Visual Studio Code**, utilizando Maven para build e execução local. A aplicação respondeu corretamente em `http://localhost:8080/` e `http://localhost:8080/actuator/health`.
