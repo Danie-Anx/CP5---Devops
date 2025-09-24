@@ -19,26 +19,37 @@ Isso garante que a aplicação pode ser usada tanto para **teste local** quanto 
 
 ---
 
-## 🖥️ Como rodar localmente
+## 🖥️ Como rodar localmente (VS Code + Maven)
+
+Durante o desenvolvimento e testes utilizamos o **Visual Studio Code** com terminal integrado.  
+Os passos foram os seguintes:
 
 1. Certifique-se de ter instalado:
    - Java 17+
    - Maven 3.9+
    - Docker (opcional, apenas se quiser rodar em container)
 
-2. Compile e gere o `.jar`:
+2. No **VS Code**, abra um terminal na pasta do projeto (`api-dimdim`) e rode o build:
    ```bash
    mvn clean package -DskipTests
    ```
+
+   ⚡ Importante: o `pom.xml` já está configurado para gerar um **JAR executável** automaticamente.
 
 3. Execute a aplicação:
    ```bash
    java -jar target/api-dimdim-1.0.0.jar
    ```
 
-4. Acesse no navegador ou via `curl`:
+4. Teste no navegador ou pelo terminal:
    - [http://localhost:8080/](http://localhost:8080/)
    - [http://localhost:8080/actuator/health](http://localhost:8080/actuator/health)
+
+   Ou no terminal do VS Code com `curl`:
+   ```bash
+   curl http://localhost:8080/
+   curl http://localhost:8080/actuator/health
+   ```
 
 ---
 
@@ -101,5 +112,8 @@ O plugin cria o **App Service** no Azure e sobe a aplicação.
    az container create -g rg-moneyhub -n aci-api-dimdim-v1      --image moneyhubrpf1776.azurecr.io/api-dimdim:v1      --registry-login-server moneyhubrpf1776.azurecr.io      --registry-username <USERNAME> --registry-password <PASSWORD>      --cpu 1 --memory 1 --ports 8080 --ip-address Public
    ```
 
-Repite o mesmo processo para as versões `v2` e `v3`.
+Repita o mesmo processo para as versões `v2` e `v3`.
 
+---
+
+✅ **Resumo:** Testamos e rodamos a API com sucesso via **Visual Studio Code**, utilizando Maven para build e execução local. A aplicação respondeu corretamente em `http://localhost:8080/` e `http://localhost:8080/actuator/health`.
